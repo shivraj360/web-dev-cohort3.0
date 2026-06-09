@@ -1,0 +1,177 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "shiv_font";
+    src: url("Storm Gust.ttf");
+}
+
+html,body {
+   height: 100%;
+   width: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+
+main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 54% 38% 6%;
+    grid-template-rows: 11% 22% 65% ;
+    grid-template-areas: 
+    "nav nav nav"
+    "left-top center right"
+    "left-bottom center right"
+    ;
+    
+    gap: 10px;
+}
+
+.nav{
+    grid-area: nav;
+   display: flex;
+    background-color: rgb(26, 25, 25);
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+
+.logo img{
+    height: 33px;
+    margin-left: 25%;
+
+}
+
+.nav-center-links{
+    border: 1px solid orange;
+    padding: .8%;
+    display: flex;
+    gap: 45px;
+}
+.nav-center-links a {
+    text-decoration: none;
+    color: white;
+}
+@media (max-width:1040px){
+    .nav-center-links{
+        display: none;
+    }
+}
+
+.nav-right-btns{
+    margin-right: 6%;
+    
+}
+
+.nav-right-btns button{
+    width: 70px;
+   padding: 5%;
+   background-color:rgb(26, 25, 25);
+   color: white;
+   border: none;
+    
+}
+
+.nav-right-btns button:hover{
+    background-color: #e8602e;
+}
+@media (min-width:1040px){
+    #nav-right-btn2{
+        display: none;
+    }
+}
+.left-top{
+    grid-area: left-top;
+    background-color: rgb(26, 25, 25);
+    border: solid #1d1b1b.1px; 
+    border-radius: 15px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#name{
+    font-family: shiv_font;
+    font-size: 100px;
+    
+    
+}
+#name:hover{
+    color: #e8602e;
+}
+.left-bottom{
+    grid-area: left-bottom;
+    background-color: rgb(26, 25, 25);
+     border: solid rgb(29, 27, 27).1px; 
+    border-radius: 15px;
+    margin-left: 20px;
+}
+.self{
+    display: flex;
+    flex-direction: column;
+}
+
+.self a{
+    color: white;
+    font-size: 30px;
+}
+
+.center{
+    grid-area: center;
+    background-color: rgb(26, 25, 25);
+     border: solid rgb(29, 27, 27).1px; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.self-img{
+    width: 90%;
+    height: 90%;
+}
+
+.self-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.right{
+    margin-right: 20px;
+    grid-area: right;
+    background-color: rgb(26, 25, 25);
+     border: solid rgb(29, 27, 27).1px; 
+    border-radius: 15px;
+
+    
+}
+@media (max-width:1040px){
+    .right{
+        display: none;
+    }
+    
+}
+
+@media (max-width:1040px){
+    main{
+        grid-template-columns:54% 44% ;
+        margin-right: 2%;
+    }
+    
+}
+@media (max-width:700px){
+    main{
+        grid-template-columns:98% ;
+        margin-right: 2%;
+    }
+    
+}
+
