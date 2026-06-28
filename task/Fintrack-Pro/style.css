@@ -178,12 +178,12 @@ section h4{
 }
 #resetBtn{
     border-radius: 10px;
-    padding-left:95px;
-    padding-right:85px;
+    padding-left:75px;
+    padding-right:75px;
     margin-top: 30px;
     font-size: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color:#fff5f5;
     color: #991b1b;
     border: 1px solid red;
