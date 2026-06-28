@@ -1,0 +1,214 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    border-right:1px solid #bbbdbc;
+}
+main{
+    background-color: #f4f7f6;
+   
+    margin-left: 250px;
+}
+
+.logo{
+    font-size: 40px;
+    padding: 10px;
+}
+.logo span{
+    color: red;
+}
+.menu{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+.menu h3:hover{
+    background-color:#dbeafe;
+    border-radius: 10px;
+    padding: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom:1px solid #bbbdbc;
+    background-color: white;
+}
+
+.add-transaction button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+    background-color: black;
+    color: white;
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.avatar{
+    padding: 10px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.profile button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border:2px solid #bbbdbc;
+    background-color: white;
+
+}
+section{
+    padding: 30px;
+}
+
+
+section h4{
+    color: rgb(107, 106, 106);
+}
+
+.tracking-cards{
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+
+}
+.card{
+   
+    border: 1px solid #bbbdbc;
+    height: 170px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+}
+#current-balance i{
+    padding: 10px;
+    background-color: #dbeafe;
+    border-radius: 10px;
+}
+#total-income i{
+    padding: 10px;
+    background-color: rgb(127, 255, 178);
+    border-radius: 10px;
+}
+#total-expense i{
+    padding: 10px;
+    background-color: rgb(237, 171, 124);
+    border-radius: 10px;
+}
+#total-transaction i{
+    padding: 10px;
+    background-color: rgb(108, 156, 196);
+    border-radius: 10px;
+}
+.card p{
+    padding-top: 20px;
+}
+.card h1{
+    padding-top: 10px;
+}
+.analysing-area{
+    padding-top:30px ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "cash-flow-analysis preference"
+    "all-transactions preference";
+    gap: 40px;
+}
+.cash-flow-analysis{
+    grid-area: cash-flow-analysis;
+    border: 1px solid #bbbdbc;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.all-transactions{
+    grid-area:all-transactions ;
+    border: 1px solid #bbbdbc;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.preference{
+    grid-area:preference ;
+    border: 1px solid #bbbdbc;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.theme{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #bbbdbc ;
+}
+.theme button{
+    padding: 8px;
+    padding-left: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+#resetBtn{
+    border-radius: 10px;
+    padding-left:95px;
+    padding-right:85px;
+    margin-top: 30px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:#fff5f5;
+    color: #991b1b;
+    border: 1px solid red;
+    cursor: pointer;
+
+
+}
+
+select{
+    padding:10px ;
+    padding-right: 300px;
+    background-color: #f4f7f6;
+    border-radius: 10px;
+    cursor: pointer;
+  
+}
+.filters input{
+    padding: 10px;
+    padding-right: 70px;
+    background-color: #f4f7f6;
+    border-radius: 10px;
+}
+table{
+    
+    border-collapse: separate;
+    border-spacing: 50px 30px;
+    color: #5a5c5b;
+}

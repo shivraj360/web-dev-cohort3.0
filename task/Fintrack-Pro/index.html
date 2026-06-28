@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensex</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <aside>
+            <div class="logo">Expense<span>X</span></div>
+            <div class="menu">
+                <h3><i class="ri-dashboard-line"></i>Dashboard</h3>
+                <h3><i class="ri-settings-3-fill"></i>Setting</h3>
+            </div>
+        </aside>
+    <main>
+        
+        <nav>
+            <div class="add-transaction">
+                <button>+ Add Transaction</button>
+            </div>
+            <div class="profile">
+                <div class="avatar">shiv</div>
+                <button><i class="ri-logout-box-r-line"></i>Logout</button>
+            </div>
+        </nav>
+        <section>
+            <h1>ExpenseX</h1>
+            <h4>Calculate/Plan like a Professor </h4>
+            <div class="tracking-cards">
+                <div class="card" id="current-balance">
+                    <i class="ri-bank-line"></i>
+                    <p>Current Balance</p>
+                    <h1>$0.00</h1>
+                </div>
+                <div class="card" id="total-income">
+                    <i class="ri-arrow-right-up-box-fill"></i>
+                    <p>Total Income</p>
+                    <h1>$0.00</h1>
+                </div>
+                <div class="card" id="total-expense">
+                    <i class="ri-arrow-left-down-line"></i>
+                    <p>Total Expense</p>
+                    <h1>$0.00</h1>
+                </div>
+                <div class="card" id="total-transaction">
+                    <i class="ri-hourglass-fill"></i>
+                    <p>Total Transactions</p>
+                    <h1>$0.00</h1>
+                </div>
+            </div>
+            <div class="analysing-area">
+                <div class="cash-flow-analysis">
+                    <h1>Cash Flow Analysis</h1>
+                </div>
+                <div class="all-transactions">
+                    <h1>All Transactions</h1>
+                    <div class="filters">
+                        <input  type="text" placeholder="search tractions....">
+                        <select name="" id="transaction-category">
+                            <option value="">All Types</option>
+                            <option value="">Income Only</option>
+                            <option value="">Expense Only</option>
+                        </select>
+                    </div>
+                    <table>
+                        
+                        <tr>
+                            <th>DATE</th>
+                            <th>DESCRIPTION</th>
+                            <th>CATEGORY</th>
+                            <th>AMOUNT</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                <div class="preference">
+                    <h1>Preference</h1>
+                    <div class="theme">
+                        <h3>Dark  Mode</h3>
+                        <button></button>
+                    </div>
+                    <button id="resetBtn"><i class="ri-delete-bin-5-fill"></i>Reset All Data</button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
