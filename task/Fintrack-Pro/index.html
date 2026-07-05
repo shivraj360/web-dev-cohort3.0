@@ -22,11 +22,47 @@
         
         <nav>
             <div class="add-transaction">
-                <button>+ Add Transaction</button>
+                <button id="add-transactionBtn">+ Add Transaction</button>
+            </div>
+            <div class="form-container">
+                <div class="form-nav">
+                    <h3>Add Transaction</h3>
+                    <button id="form-closeBtn">x</button>
+                </div>
+                <form action="" id="user-form">
+                    <label for="Type">Type</label>
+                    <select id="transaction-type">
+                        <option value="Expense">Expense</option>
+                        <option value="Income">Income</option>
+                    </select>
+                    <label for="">Description</label>
+                    <input type="text" placeholder="e.g Amazon, Salary, coffee" id="description" required>
+                    <label for="">Amount</label>
+                    <input type="number" id="amount"  required>
+                    <label for="">Date</label>
+                    <input type="Date" id="date"required>
+                    <label for="Type">category</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Food & Dining">Food & Dining</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Recharge & Bills">Recharge & Bills</option>
+                        <option value="Petrol & Auto">Petrol & Auto</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button id="save-transaction">Save Transaction</button>
+                </form>
+                
+                <form action="">
+
+                </form>
             </div>
             <div class="profile">
                 <div class="avatar">shiv</div>
-                <button><i class="ri-logout-box-r-line"></i>Logout</button>
+                <button id="logout"><i class="ri-logout-box-r-line"></i>Logout</button>
             </div>
         </nav>
         <section>
@@ -51,7 +87,7 @@
                 <div class="card" id="total-transaction">
                     <i class="ri-hourglass-fill"></i>
                     <p>Total Transactions</p>
-                    <h1>$0.00</h1>
+                    <h1>0</h1>
                 </div>
             </div>
             <div class="analysing-area">
@@ -69,23 +105,26 @@
                         </select>
                     </div>
                     <table>
-                        
-                        <tr>
-                            <th>DATE</th>
-                            <th>DESCRIPTION</th>
-                            <th>CATEGORY</th>
-                            <th>AMOUNT</th>
-                            <th>ACTIONS</th>
-                        </tr>
-                        
-                    </table>
+                        <tbody>
+                            <tr>
+                                <th>DATE</th>
+                                <th>DESCRIPTION</th>
+                                <th>CATEGORY</th>
+                                <th>AMOUNT</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </tbody>
                     
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                    </table>
                 </div>
                 <div class="preference">
                     <h1>Preference</h1>
                     <div class="theme">
                         <h3>Dark  Mode</h3>
-                        <button></button>
+                        <button id="dark-theme"></button>
                     </div>
                     <button id="resetBtn"><i class="ri-delete-bin-5-fill"></i>Reset All Data</button>
 
@@ -93,5 +132,7 @@
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
