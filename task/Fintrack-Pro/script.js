@@ -50,9 +50,7 @@ darkTheme.addEventListener("click", () => {
 
 });
 
-// ======================
-// LOCAL STORAGE
-// ======================
+
 addTransaction.addEventListener("click", () => {
     formContainer.style.display = "flex";
 });
@@ -85,19 +83,18 @@ userForm.addEventListener("submit", function (e) {
         category
     };
 
-    // Transaction Save
     transactions.push(data);
 
-    // Local Storage Save
+    
     localStorage.setItem("data", JSON.stringify(transactions));
 
-    // Table Reload
+    
     renderTransactions();
 
-    // Form Close
+
     formContainer.style.display = "none";
 
-    // Form Reset
+    
     userForm.reset();
 
 });
