@@ -7,15 +7,15 @@
 
 @font-face{
     font-family:Ubuntu;
-    src:url("../assets/font/Ubuntu/Ubuntu-Regular.ttf");
+    src:url("../assets/font/Ubuntu-Regular.ttf");
 }
 @font-face {
     font-family: parrot;
-    src: url(../assets/font/Orbitron/static/Orbitron-Regular.ttf);
+    src: url(../assets/font/Orbitron-Regular.ttf);
 }
 @font-face {
     font-family: garuda;
-    src: url(/assets/font/Fira_Sans/FiraSans-Regular.ttf);
+    src: url(/assets/font/FiraSans-Regular.ttf);
 }
 
 :root{
