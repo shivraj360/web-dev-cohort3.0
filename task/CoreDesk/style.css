@@ -1,5 +1,4 @@
 
-
 *{
     margin:0;
     padding:0;
@@ -12,7 +11,11 @@
 }
 @font-face {
     font-family: parrot;
-    src: url(../assets/font/Orbitron/static/Orbitron-Regular.ttf);
+    src: url(../assets/font/Orbitron/Orbitron-Regular.ttf);
+}
+@font-face {
+    font-family: garuda;
+    src: url(/assets/font/Fira_Sans/FiraSans-Regular.ttf);
 }
 
 :root{
@@ -65,7 +68,7 @@ body{
      color:white;
 
    
-    background-image: url(../assets/wallpapers/parrot-6.1.png);
+    background-image: url(../assets/wallpapers/garuda-bg.jpg);
     background-position:center;
 
     background-size:cover;
@@ -454,9 +457,7 @@ main{
 }
 
 
-/* ===========================
-      RESPONSIVE
-=========================== */
+
 
 @media(max-width:1300px){
 
@@ -706,6 +707,12 @@ width: 200px;
 .theme-box:hover{
     transform:translateY(-8px);
 }
+
+
+
+
+
+
 #setting-page{
     display: flex;
     justify-content: space-between;
