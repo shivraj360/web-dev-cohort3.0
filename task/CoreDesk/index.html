@@ -3,106 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreDesk</title>
+    <title>CoreDesk - Ubuntu Edition</title>
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-     <aside>
-            <div class="logo">
-                <img src="./assets/images/linux.jpg" alt="">
-            </div>
-            <nav class="menu">
-                <a href="#" class="menu-item active"> <i data-lucide="layout-dashboard"></i>Dashboard</a>
-                <a href="#" class="menu-item"><i data-lucide="square-check-big"></i>ToDo List</a>
-                <a href="#" class="menu-item"> <i data-lucide="calendar-days"></i>Daily Planner</a>
-                <a href="#" class="menu-item"> <i data-lucide="timer"></i>Pomodoro Timer</a>
-                <a href="#" class="menu-item"><i data-lucide="quote"></i>Motivation Quotes</a>
-                <a href="#" class="menu-item">  <i data-lucide="cloud-sun"></i>weather</a>
-                <a href="#" class="menu-item"><i data-lucide="clock-3"></i>Date & Time</a>
-                <a href="#" class="menu-item"><i data-lucide="moon-star"></i>Theme Switch</a>
-                <a href="#" class="menu-item"><i data-lucide="settings"></i>Settings</a>
-               
-            </nav>
-            
-    </aside>
-    <main>
-       
-        <nav class="top-nav">
-                <div class="search">
-                    <input type="text" placeholder="search anythong">
-                </div>
-                <div class="profile">
-                    <button><i data-lucide="bell"></i>  </button>
-                    <div class="avatar"></div>
-                </div>
+
+   
+
+    <aside>
+
+        <div class="logo">
+
+            <img id="logo-img" src="./assets/images/linux.jpg" alt="Ubuntu Logo">
+
+            <h1>CoreDesk</h1>
+
+            <span>Ubuntu Edition</span>
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active" id="dashboard">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-todo">
+                <i data-lucide="square-check-big"></i>
+                <span>Todo List</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-daily-planner">
+                <i data-lucide="calendar-days"></i>
+                <span>Daily Planner</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-daily-goal">
+                <i data-lucide="target"></i>
+                <span>Daily Goals</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-timer">
+                <i data-lucide="timer"></i>
+                <span>Pomodoro Timer</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-quotes">
+                <i data-lucide="quote"></i>
+                <span>Motivation Quotes</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-weather">
+                <i data-lucide="cloud-sun"></i>
+                <span>Weather</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-date-time">
+                <i data-lucide="clock-3"></i>
+                <span>Date & Time</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-theme">
+                <i data-lucide="moon-star"></i>
+                <span>Theme Switch</span>
+            </a>
+
+            <a href="#" class="menu-item" id="nav-setting">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+
         </nav>
+
+    </aside>
+
+
+
+    <main>
+
+        <!-- Top Navigation -->
+
+        <header class="top-nav">
+
+            <div class="search">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search anything..."
+                >
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="weather-widget">
+
+                    <i data-lucide="cloud-sun"></i>
+
+                    <span>31°C</span>
+
+                </div>
+
+                <div class="clock">
+
+                    <i data-lucide="clock-3"></i>
+
+                    <span id="live-time">08:45 PM</span><br><Span id="live-date"></Span>
+
+                </div>
+
+                <button class="notification">
+
+                    <i data-lucide="bell"></i>
+
+                </button>
+
+                <div class="avatar" id="avatar">
+
+                    <img id="avatarImg" src="./assets/images/linux.jpg" alt="Avatar">
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Greeting -->
+
         <section id="top-section">
+
             <div class="left-greet">
-                <h1>Good Evening Shivra</h1>
-                <p>so jao ab to raat ho gyi</p>
+
+                <h1>👋 Good Evening, Shiv</h1>
+
+                <p>
+                    Stay focused and complete today's goals.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Cards -->
+
+        <!-- <section id="card-section">
+
+            <div class="card card1">
+
+                <i data-lucide="square-check-big"></i>
+
+                <h2>Todo List</h2>
+
+                <p>Add, manage and complete your daily tasks.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card2">
+
+                <i data-lucide="calendar-days"></i>
+
+                <h2>Daily Planner</h2>
+
+                <p>Organize your complete day efficiently.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card3">
+
+                <i data-lucide="target"></i>
+
+                <h2>Daily Goals</h2>
+
+                <p>Track your daily progress and targets.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card4">
+
+                <i data-lucide="timer"></i>
+
+                <h2>Pomodoro Timer</h2>
+
+                <p>Boost your productivity using focus sessions.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card5">
+
+                <i data-lucide="quote"></i>
+
+                <h2>Motivation Quotes</h2>
+
+                <p>Stay inspired every single day.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card6">
+
+                <i data-lucide="cloud-sun"></i>
+
+                <h2>Weather</h2>
+
+                <p>Check live weather updates instantly.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card7">
+
+                <i data-lucide="clock-3"></i>
+
+                <h2>Date & Time</h2>
+
+                <p>Always stay updated with current time.</p>
+
+                <button>Open</button>
+
+            </div>
+
+            <div class="card card8">
+
+                <i data-lucide="moon-star"></i>
+
+                <h2>Theme Switch</h2>
+
+                <p>Switch between beautiful desktop themes.</p>
+
+                <button>Open</button>
+
+            </div>
+
+        </section> -->
+        <section class="page" id="todo-page">
+            <div class="todo-nav">
+                <button id="todo-backpage"><i data-lucide="skip-back"></i>  </button>
+                <h1>todo app</h1>
+            </div>
+            <div class="todo-content">
+                <button id="add-todo-task-btn">+ADD TASK</button>
+                <div class="todo-form">
+                    <form action="" >
+                        Title <br> <input type="text" placeholder="title "><br>
+                        Description <br> <input type="text" placeholder="description "><br>
+                        <button id="todo-submit-btn" >Done</button>
+
+                    </form>
+                </div>
             </div>
         </section>
-        <section id="card-section">
-            <div class="card1">
-    <i data-lucide="square-check-big"></i>
-    <h1>Todo List</h1>
-    <p>Add, manage and complete your tasks.</p>
-    <button>Open</button>
-</div>
-
-<div class="card2">
-    <i data-lucide="calendar-days"></i>
-    <h1>Daily Planner</h1>
-    <p>Organize your daily schedule efficiently.</p>
-    <button>Open</button>
-</div>
-
-<div class="card3">
-    <i data-lucide="target"></i>
-    <h1>Daily Goals</h1>
-    <p>Track your daily goals and progress.</p>
-    <button>Open</button>
-</div>
-
-<div class="card4">
-    <i data-lucide="timer"></i>
-    <h1>Pomodoro Timer</h1>
-    <p>Stay focused with productive work sessions.</p>
-    <button>Open</button>
-</div>
-
-<div class="card5">
-    <i data-lucide="quote"></i>
-    <h1>Motivation Quotes</h1>
-    <p>Get inspired with daily motivational quotes.</p>
-    <button>Open</button>
-</div>
-
-<div class="card6">
-    <i data-lucide="cloud-sun"></i>
-    <h1>Weather</h1>
-    <p>View live weather updates instantly.</p>
-    <button>Open</button>
-</div>
-
-<div class="card7">
-    <i data-lucide="clock-3"></i>
-    <h1>Date & Time</h1>
-    <p>Display the current date and live time.</p>
-    <button>Open</button>
-</div>
-
-<div class="card8">
-    <i data-lucide="moon-star"></i>
-    <h1>Theme Switch</h1>
-    <p>Switch between beautiful desktop themes.</p>
-    <button>Open</button>
-</div>
+        <section class="page" id="daily-planner-page" >
+            <button id="planner-backpage"><i data-lucide="skip-back"></i> </button>
+            <h1>Daily Planenr</h1>
         </section>
+        <section class="page" id="daily-goals-page">
+            <button  id="goals-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Daily Goal</h1>
+        </section>
+        <section class="page" id="timer-page">
+            <button  id="timer-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Pomodoro Timer</h1>
+        </section>
+        <section class="page" id="quotes-page">
+            <button  id="quotes-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Motivation Quotes</h1>
+        </section>
+        <section class="page" id="weather-page">
+            <button id="weather-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Weather</h1>
+        </section>
+        <section class="page" id="date-time-page">
+            <button id="date-time-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Date & Time</h1>
+        </section>
+        <section class="page" id="theme-page">
+
+    <div class="theme-header">
+        <button id="theme-backpage">
+            <i data-lucide="arrow-left"></i>
+        </button>
+
+        <h1>Theme Switch</h1>
+    </div>
+
+    <div class="theme-card">
+
+        <div class="theme-box" id="parrot-theme">
+            <h2> Parrot OS</h2>
+            <button id="parrot-themeBtn">clcik for magic</button>
+        </div>
+
+        <div class="theme-box" id="garuda-theme">
+            <h2> Garuda</h2>
+        </div>
+
+        <div class="theme-box" id="linux-theme">
+            <h2> Linux</h2>
+        </div>
+
+        <div class="theme-box" id="mac-theme">
+            <h2> macOS</h2>
+        </div>
+
+    </div>
+
+</section>
+        <section class="page" id="setting-page">
+            <button id="setting-backpage"><i data-lucide="skip-back"></i></button>
+            <h1>Setting</h1>
+        </section>
+
     </main>
+
+
     <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
+
+    <script>
+
+        lucide.createIcons();
+
+    </script>
+
+    <script src="./js/script.js"></script>
+
 </body>
 </html>
