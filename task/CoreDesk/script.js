@@ -262,9 +262,35 @@ parrotThemeBtn.addEventListener("click", () => {
     console.log("lagi ya nhi");
     console.log(logoImg);
 
+});
+
+const garudaThemeBtn = document.querySelector("#garuda-themeBtn")
+
+
+
+garudaThemeBtn.addEventListener("click", () => {
+    themePage.style.display ="none";
+    navTheme.classList.remove("active");
+    dashboard.classList.add("active");
+    body.style.fontFamily = "garuda";
+    body.style.color = "purple";
+    menuItem.forEach((event) => {
+        event.style.color = "purple";
+    })
+    aside.style.color ="purple";
+    aside.style.backgroundColor = "black";
+    main.style.backgroundImage = "url(./assets/wallpapers/garuda-bg.jpg)";
+   
+    logoImg.src = "./assets/images/garuda.jpg";
+    avatarImg.src = "./assets/images/garudalogo.png";
+    console.log("lagi ya nhi");
+    console.log(logoImg);
+
     
 
 });
-const liveDateTime = document.querySelector("#live-date-time");
+const liveTime = document.querySelector("#live-time");
+const liveDate = document.querySelector("#live-date");
 const fetchDateTime = new Date();
-liveDateTime.textContent = fetchDateTime.toLocaleTimeString ;
+liveTime.textContent = fetchDateTime.toLocaleTimeString() ;
+liveDate.textContent = fetchDateTime.toLocaleDateString() ;
