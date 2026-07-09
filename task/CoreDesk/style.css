@@ -1,6 +1,4 @@
-/* ===========================
-        RESET
-=========================== */
+
 
 *{
     margin:0;
@@ -12,14 +10,18 @@
     font-family:Ubuntu;
     src:url("../assets/font/Ubuntu/Ubuntu-Regular.ttf");
 }
+@font-face {
+    font-family: parrot;
+    src: url(../assets/font/Orbitron/static/Orbitron-Regular.ttf);
+}
 
 :root{
 
     /* Background */
 
     --primary-bg:#1E1E2E;
-    --secondary-bg:rgba(43,43,60,.65);
-    --card-bg:rgba(49,50,68,.55);
+    
+    --card-bg:rgba(43,43,60,.65);
     --hover-bg:#3A3A4F;
 
     /* Colors */
@@ -41,20 +43,17 @@
 
     --shadow:0 10px 25px rgba(0,0,0,.35);
 
-    /* Transition */
+
 
     --transition:.10s ease;
 
-    /* Sidebar */
+    
 
     --sidebar-width:260px;
 
 }
 
 
-/* ===========================
-      GLOBAL
-=========================== */
 
 html,
 body{
@@ -63,16 +62,17 @@ body{
     height:100%;
 
     font-family:Ubuntu;
+     color:white;
 
-    background:url("../assets/wallpapers/linux-bg.jpg");
-
+   
+    background-image: url(../assets/wallpapers/parrot-6.1.png);
     background-position:center;
 
     background-size:cover;
 
     background-repeat:no-repeat;
 
-    
+    overflow:hidden;
 
 }
 
@@ -84,35 +84,21 @@ body{
 }
 
 
-/* ===========================
-      SIDEBAR
-=========================== */
+
 
 aside{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:var(--sidebar-width);
-
     height:100vh;
-
     padding:25px;
-
     display:flex;
-
     flex-direction:column;
-
     gap:30px;
-
-    background:rgba(30,30,46,.78);
-
+    background:rgb(27, 24, 24);
     backdrop-filter:blur(18px);
-
     border-right:1px solid rgba(255,255,255,.08);
-
 }
 
 
@@ -158,10 +144,6 @@ aside{
 
 }
 
-
-/* ===========================
-      MENU
-=========================== */
 
 .menu{
 
@@ -210,29 +192,18 @@ aside{
 }
 
 .menu-item.active{
-
     background:var(--hover-bg);
-
     border-left:4px solid var(--accent);
 
 }
 
 
-/* ===========================
-      MAIN
-=========================== */
 
 main{
-
     margin-left:var(--sidebar-width);
-
     width:calc(100% - var(--sidebar-width));
-
     height:100vh;
-
     overflow:auto;
-    
-    
     background: url(../assets/wallpapers/linux\ bg.jpg);
     background-repeat:no-repeat ;
     background-size: cover;
@@ -241,9 +212,6 @@ main{
 }
 
 
-/* ===========================
-      TOP NAV
-=========================== */
 
 .top-nav{
 
@@ -324,7 +292,7 @@ main{
 
     gap:8px;
 
-    color:white;
+   
 
 }
 
@@ -340,7 +308,7 @@ main{
 
     background:rgba(255,255,255,.08);
 
-    color:white;
+    
 
     cursor:pointer;
 
@@ -371,7 +339,7 @@ main{
 
 .left-greet h1{
 
-    color:white;
+   
 
     font-size:42px;
 
@@ -381,109 +349,57 @@ main{
 
 .left-greet p{
 
-    color:var(--secondary-text);
+    
 
     font-size:18px;
 
 }
 
 
-/* ===========================
-        CARD GRID
-=========================== */
+
 
 #card-section{
-
     padding:40px;
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:30px;
-
 }
-
-
-/* ===========================
-        CARD
-=========================== */
-
 .card{
-
     min-height:270px;
-
     background:var(--card-bg);
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:20px;
-
     backdrop-filter:blur(18px);
-
     box-shadow:var(--shadow);
-
     padding:30px;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:space-between;
-
     align-items:center;
-
     text-align:center;
-
     transition:var(--transition);
-
 }
 
 .card:hover{
 
     transform:translateY(-10px);
-
     border-color:var(--accent);
-
     box-shadow:0 20px 40px rgba(0,0,0,.45);
 
 }
 
 
-/* ===========================
-      CARD ICON
-=========================== */
 
 .card i{
-
     width:55px;
-
     height:55px;
-
     color:var(--accent);
-
 }
-
-
-/* ===========================
-      CARD TITLE
-=========================== */
 
 .card h2{
-
-    color:white;
-
     font-size:24px;
-
 }
-
-
-/* ===========================
-      CARD TEXT
-=========================== */
-
 .card p{
-
     color:var(--secondary-text);
 
     line-height:1.6;
@@ -491,12 +407,6 @@ main{
     font-size:15px;
 
 }
-
-
-/* ===========================
-      BUTTON
-=========================== */
-
 .card button{
 
     padding:12px 28px;
@@ -528,9 +438,6 @@ main{
 }
 
 
-/* ===========================
-        SCROLLBAR
-=========================== */
 
 ::-webkit-scrollbar{
 
@@ -615,4 +522,226 @@ main{
 
     }
 
+}
+#todo-page{
+    display: flex; 
+    flex-direction: column;
+    
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 91;
+    color: white;
+    display: none; 
+    
+}
+#todo-backpage{
+height: 50px;
+width: 200px;
+}
+#daily-planner-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 92;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#planner-backpage{
+height: 50px;
+width: 200px;
+}
+
+#daily-goals-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#goals-backpage{
+height: 50px;
+width: 200px;
+}
+
+
+#timer-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#timer-backpage{
+height: 50px;
+width: 200px;
+}
+
+#quotes-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#quotes-backpage{
+height: 50px;
+width: 200px;
+}
+
+#weather-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#weather-backpage{
+height: 50px;
+width: 200px;
+}
+
+
+#date-time-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#date-time-backpage{
+height: 50px;
+width: 200px;
+}
+
+
+#theme-page{
+    position:fixed;
+    inset:0;
+    display:none;
+    flex-direction:column;
+    background:#111827;
+    color:white;
+    z-index:999;
+}
+
+.theme-header{
+    height:70px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:0 30px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+#theme-backpage{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.theme-header h1{
+    font-size:28px;
+    font-weight:600;
+}
+
+.theme-card{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    padding:40px;
+}
+
+.theme-box{
+    border-radius:20px;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    transition:.3s;
+    background:#1e293b;
+}
+
+.theme-box:hover{
+    transform:translateY(-8px);
+}
+#setting-page{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 100vh;
+    width:calc(100% - var(--sidebar-width));
+    position: fixed;
+    top: 0%;
+    z-index: 93;
+    color: white; 
+    display: none; 
+    padding: 20px;  
+}
+#setting-backpage{
+height: 50px;
+width: 200px;
+}
+.todo-nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+.todo-content{
+    padding: 20px;
+}
+#add-todo-task-btn{
+    padding: 20px;
+}
+.todo-form{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    border: #E95420;
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+    background-color: green;
 }
